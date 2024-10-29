@@ -2,6 +2,7 @@
 
 ## Install Symfony
 ### Development environment: MacOS
+### PHP version: 8.3.13
 ```shell
 ## get symfony
 wget https://get.symfony.com/cli/installer -O - | bash
