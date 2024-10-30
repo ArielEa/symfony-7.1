@@ -15,3 +15,6 @@
 
 ### jetbrains phpstorm ignore
 /.idea
+
+### database files ignore
+/.env

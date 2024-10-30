@@ -14,6 +14,8 @@ class DefaultController extends AbstractController {
 
     /**
      * 需要优先定义一个空的首页
+     * @param EntityManagerInterface $entityManager
+     * @param Request $request
      * @return JsonResponse
      */
     #[Route('/', name: 'api_home')]

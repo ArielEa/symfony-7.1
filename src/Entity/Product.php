@@ -10,13 +10,18 @@ class Product
 {
     #[ORM\Column(type: 'integer')]
     #[ORM\Id, ORM\GeneratedValue()]
-    private $id;
+    private int $id;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $city;
+    private string $city;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $town;
+    private string $town;
+
+    public function getId(): int
+    {
+        return $this->id;
+    }
 
     public function getCity(): ?string
     {
