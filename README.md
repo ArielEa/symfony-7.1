@@ -119,3 +119,26 @@ nelmio_cors:
             allow_methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
             max_age: 3600
 ```
+
+### Configuring a Web Server
+```
+server {
+    listen 80;
+    server_name your.domain.com;
+    root /path/your_project/public;
+
+    location / {
+        try_files $uri /index.php$is_args$args;
+    }
+    
+    ## set a custom port, like 9000, 9001, but it must be the same to php-fpm port.
+    location ~ \.php$ {
+    	fastcgi_pass 127.0.0.1:9001;
+    	fastcgi_index index.php;
+    	include fastcgi_params;
+    	fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    }
+
+}
+
+```
