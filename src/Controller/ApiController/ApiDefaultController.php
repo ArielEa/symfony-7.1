@@ -19,7 +19,9 @@ class ApiDefaultController extends ApiBaseController
             [
                 "method" =>  $this->request->getMethod(),
                 "path" => __DIR__,
-                "pwd" => getcwd()
+                "pwd" => getcwd(),
+                "request_time" => date("Y-m-d H:i:s", time()),
+                "timezone" => date_default_timezone_get()
             ]
         );
     }
