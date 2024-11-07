@@ -139,4 +139,14 @@ class Character
     {
         $this->register_time = $register_time;
     }
+
+    public function getCharacterCode(): string
+    {
+        return $this->character_code;
+    }
+
+    public function setCharacterCode(string $character_code): void
+    {
+        $this->character_code = $character_code;
+    }
 }

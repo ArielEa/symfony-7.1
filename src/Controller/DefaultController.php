@@ -27,6 +27,10 @@ class DefaultController extends AbstractController {
 //        $entityManager->persist($product);
 //        $entityManager->flush();
 
+        echo date_default_timezone_get();
+
+        echo PHP_EOL;
+
         return new JsonResponse([
             'message' => 'Welcome to my Symfony project!',
             'status' => 'success',
