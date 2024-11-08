@@ -9,6 +9,9 @@ framework:
     #esi: true
     #fragments: true
 
+    ## route is not found
+    error_controller: 'App\Controller\ErrorController::show'
+
 when@test:
     framework:
         test: true
